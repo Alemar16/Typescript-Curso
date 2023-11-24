@@ -1,0 +1,7 @@
+//UNDEFINED
+
+//DECLARACION DE UNA VARIABLE CON VALOR INDEFINED
+let variableUndefined: undefined;
+
+//ASIGNACION DE UNA VARIABLE CON VALOR INDEFINED
+variableUndefined = undefined;
