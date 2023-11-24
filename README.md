@@ -54,3 +54,16 @@ En la terminal, navega al directorio que contiene tu archivo TypeScript y ejecut
 tsc script.ts
 ```
 Esto generará un archivo app.js en el repositorio.
+
+# Modo observador
+Este modo observa los archivos TypeScript y automáticamente recompila el código cuando detecta cambios.
+
+Para usar el modo observador, puedes abrir tu terminal y navegar al directorio que contiene tu archivo TypeScript (script.ts). Luego, ejecuta el siguiente comando:
+
+```bash
+tsc script.ts -w
+```
+
+Después de ejecutar este comando, el compilador de TypeScript estará observando el archivo script.ts y cualquier cambio que realices en este archivo provocará una recompilación automática.
+
+Este modo es útil durante el desarrollo, ya que te permite ver rápidamente los efectos de tus cambios sin tener que ejecutar manualmente el compilador cada vez que haces una modificación en tu código.
