@@ -67,3 +67,41 @@ tsc script.ts -w
 Después de ejecutar este comando, el compilador de TypeScript estará observando el archivo script.ts y cualquier cambio que realices en este archivo provocará una recompilación automática.
 
 Este modo es útil durante el desarrollo, ya que te permite ver rápidamente los efectos de tus cambios sin tener que ejecutar manualmente el compilador cada vez que haces una modificación en tu código.
+
+Sin embargo cuando tienes que crear o usar varios archivos .ts en tu proyecto seria conveniente crear un archivo tsconfig.json y ajustar las preferencias para elproyecto, no obstante tambien existe uno opcion mas idonea y de control total como "iniciar un proyecto cono Typescript":
+
+```bash
+tsc init
+```
+
+# Iniciar Proyecto TypeScript
+El comando `tsc init` (o `tsc --init`) se utiliza para inicializar un proyecto TypeScript creando un archivo de configuración `tsconfig.json`. Este archivo de configuración permite personalizar cómo TypeScript compila tus archivos. Al ejecutar `tsc init`, TypeScript intentará generar un archivo `tsconfig.json` basado en algunas opciones predeterminadas y la estructura de tu proyecto.
+
+Cuando ejecutas `tsc init`, sucede lo siguiente:
+
+- **Creación del archivo `tsconfig.json`:** Se genera un archivo `tsconfig.json` en el directorio actual (o en el directorio especificado si proporcionas una ruta).
+
+- **Configuración inicial:** El archivo `tsconfig.json` contendrá algunas opciones de configuración predeterminadas para empezar. Estas opciones pueden incluir cosas como la versión de ECMAScript a la que se compilará, la ubicación de los archivos fuente y el directorio de salida.
+
+- **Comentarios informativos:** El archivo generado contiene comentarios informativos en cada opción para que puedas entender su propósito y ajustarlos según tus necesidades.
+
+esto es lo que muestra la terminal despues de ejecutar el comando:
+
+```bash
+Created a new tsconfig.json with:                                                                                       
+                                                                                                                     TS 
+  target: es2016
+  module: commonjs
+  strict: true
+  esModuleInterop: true
+  skipLibCheck: true
+  forceConsistentCasingInFileNames: true
+
+
+You can learn more at https://aka.ms/tsconfig
+```
+
+Puedes verificar la documentacion segun el [enlace](https://aka.ms/tsconfig) que aparece en la terminal
+
+
+Después de ejecutar `tsc init`, puedes abrir el archivo `tsconfig.json` y modificar las opciones según tus necesidades específicas. Esto te permite personalizar cómo TypeScript compila tus archivos en función de la estructura y requisitos de tu proyecto.
